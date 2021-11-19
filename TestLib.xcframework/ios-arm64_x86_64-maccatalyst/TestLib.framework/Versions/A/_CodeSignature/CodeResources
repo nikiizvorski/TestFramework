@@ -15,7 +15,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			qCWLAiNsD7rD+d1kGhLAsTWHU0ZOPlpvqT71/lpzFNA=
+			+H/IJ4LfwHjigkxoW6MSkBJcXruBV0kYLVGgLOwWgmY=
 			</data>
 		</dict>
 		<key>Headers/TestLib.h</key>
@@ -23,6 +23,48 @@
 			<key>hash2</key>
 			<data>
 			MojgiiKtSSayVNG5cFnyC0H/iWLCcc+se78KjIMQQ2M=
+			</data>
+		</dict>
+		<key>Modules/TestLib.swiftmodule/arm64-apple-ios-macabi.swiftdoc</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			hPd+07MxdlDb5H5lp4vAr6RF9ZwxpTdLrifWqahJ8Qs=
+			</data>
+		</dict>
+		<key>Modules/TestLib.swiftmodule/arm64-apple-ios-macabi.swiftinterface</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			OJhg2D6bs9z9BU0G4/aYUQl7p7o7Hx4QjlPGAMTraak=
+			</data>
+		</dict>
+		<key>Modules/TestLib.swiftmodule/arm64-apple-ios-macabi.swiftmodule</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			sdwZ+YdTpTA/Qw2+5x+2QVfGlco2DsFocOKYph5/m1o=
+			</data>
+		</dict>
+		<key>Modules/TestLib.swiftmodule/arm64.swiftdoc</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			hPd+07MxdlDb5H5lp4vAr6RF9ZwxpTdLrifWqahJ8Qs=
+			</data>
+		</dict>
+		<key>Modules/TestLib.swiftmodule/arm64.swiftinterface</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			OJhg2D6bs9z9BU0G4/aYUQl7p7o7Hx4QjlPGAMTraak=
+			</data>
+		</dict>
+		<key>Modules/TestLib.swiftmodule/arm64.swiftmodule</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			sdwZ+YdTpTA/Qw2+5x+2QVfGlco2DsFocOKYph5/m1o=
 			</data>
 		</dict>
 		<key>Modules/TestLib.swiftmodule/x86_64-apple-ios-macabi.swiftdoc</key>
