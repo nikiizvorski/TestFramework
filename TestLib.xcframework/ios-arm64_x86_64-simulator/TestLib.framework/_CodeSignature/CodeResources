@@ -4,10 +4,6 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>Headers/Dummy.swift</key>
-		<data>
-		MQaxDsF7qfjKtUdLu5+oJqXtE6A=
-		</data>
 		<key>Headers/TestLib-Swift.h</key>
 		<data>
 		A6AGzy5l4t0pK/y0c5witQ2caFY=
@@ -75,13 +71,6 @@
 	</dict>
 	<key>files2</key>
 	<dict>
-		<key>Headers/Dummy.swift</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			cOzdp3ZtLErK9/p6pns3N/O53nCzSaiaKpWzKz+oROw=
-			</data>
-		</dict>
 		<key>Headers/TestLib-Swift.h</key>
 		<dict>
 			<key>hash2</key>
