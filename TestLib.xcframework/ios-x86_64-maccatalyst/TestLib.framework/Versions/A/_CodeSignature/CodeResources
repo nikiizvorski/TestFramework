@@ -11,6 +11,13 @@
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>Headers/Dummy.swift</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			cOzdp3ZtLErK9/p6pns3N/O53nCzSaiaKpWzKz+oROw=
+			</data>
+		</dict>
 		<key>Headers/TestLib-Swift.h</key>
 		<dict>
 			<key>hash2</key>
@@ -36,14 +43,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			e463Dmnf3Mflg7ruNYVdEqDEG/8YFOdRbYTRYDLHcig=
+			PJUf9eLUGrTIpp9cTXrbwtwn5nSAMB31MxUvLN58OLs=
 			</data>
 		</dict>
 		<key>Modules/TestLib.swiftmodule/x86_64-apple-ios-macabi.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			R3/XSOGe7Cfk4yMuLC3k8sxg4iU8o8SHOuz9RUKUyEE=
+			2Of3UT2QAyDynE7xyBxV2RtqNKowpxzDlK6F0OnD4Y0=
 			</data>
 		</dict>
 		<key>Modules/TestLib.swiftmodule/x86_64.swiftdoc</key>
@@ -57,14 +64,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			e463Dmnf3Mflg7ruNYVdEqDEG/8YFOdRbYTRYDLHcig=
+			PJUf9eLUGrTIpp9cTXrbwtwn5nSAMB31MxUvLN58OLs=
 			</data>
 		</dict>
 		<key>Modules/TestLib.swiftmodule/x86_64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			R3/XSOGe7Cfk4yMuLC3k8sxg4iU8o8SHOuz9RUKUyEE=
+			2Of3UT2QAyDynE7xyBxV2RtqNKowpxzDlK6F0OnD4Y0=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
