@@ -4,7 +4,7 @@ name: ReleaseSDK
 
 # Set to trigger only on new tag added
 on:
-  push:
+  create:
     tags:
       - '*.*.*'
 
