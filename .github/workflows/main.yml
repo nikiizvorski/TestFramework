@@ -30,9 +30,14 @@ jobs:
         id: get_version
         run: echo ::set-output name=VERSION::$(git describe --exact-match --tags `git rev-list --tags --max-count=1 --skip=0`)
 
+      # This will set latest version and print it
+      - name: Get the version
+        id: set_version
+        run: echo ::set-output name=RELEASE='${{ steps.get_version.outputs.VERSION }}'
+
       # This will update the podspec version in the file
       - name: Update PodSpec 
-        run: sed -i.bu 's/spec.version      =.*/spec.version      = ${{ 'steps.get_version.outputs.VERSION' }}/' TestLibN.podspec
+        run: sed -i.bu 's/spec.version      =.*/spec.version      = ${{ steps.set_version.outputs.RELEASE }}/' TestLibN.podspec
         
       - name: Show PodSpec Updated
         run: |
