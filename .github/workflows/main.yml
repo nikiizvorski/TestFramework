@@ -26,7 +26,7 @@ jobs:
       # This will update the podspec version in the file
       - name: Update PodSpec 
         run: |
-          sed -i "/spec.version      =/c\spec.version      = '${GITHUB_REF##*/}'" TestLibN.podspec
+          find ./ -type f -exec sed -i 's/spec.version      =.*/spec.version      = '${GITHUB_REF##*/}/' TestLibN.podspec
           
       # This should lint the current pod
       - name: Lint Pod
