@@ -22,16 +22,20 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-      
+        with:
+          fetch-depth: 0
+          
       - name: Set output
         id: vars
         run: echo ::set-output name=tag::${GITHUB_REF#refs/*/}
       - name: Check output
         env:
-          RELEASE_VERSION: ${{ steps.vars.outputs.tag }}
+          CURRENT_TAG= ${{ github.event.release.tag_name }}
+          PENULTIMATE_TAG=$(git describe --exact-match --tags `git rev-list --tags --max-count=1 --skip=1`)
+          
         run: |
-          echo $RELEASE_VERSION
-          echo ${{ steps.vars.outputs.tag }}
+          echo $CURRENT_TAG
+          echo $PENULTIMATE_TAG
       
       # This will set latest tag version and print it
       - name: Get the version
