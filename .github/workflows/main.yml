@@ -25,22 +25,14 @@ jobs:
         with:
           fetch-depth: 0
           
-      - name: Set output
-        id: vars
-        run: echo ::set-output name=tag::${GITHUB_REF#refs/*/}
-      - name: Check output
-        run: |
-          echo ${{ github.event.release.tag_name }}
-          echo ::set-output name=PENULTIMATE_TAG=$(git describe --exact-match --tags `git rev-list --tags --max-count=1 --skip=0`)
-      
       # This will set latest tag version and print it
       - name: Get the version
         id: get_version
-        run: echo ::set-output name=VERSION::$(echo $GITHUB_REF | cut -d / -f 3)
+        run: echo ::set-output name=VERSION::$(git describe --exact-match --tags `git rev-list --tags --max-count=1 --skip=0`)
 
       # This will update the podspec version in the file
       - name: Update PodSpec 
-        run: sed -i.bu 's/spec.version      =.*/spec.version      = '${{ steps.get_version.outputs.PENULTIMATE_TAG }}'/' TestLibN.podspec
+        run: sed -i.bu 's/spec.version      =.*/spec.version      = '${{ steps.get_version.outputs.VERSION }}'/' TestLibN.podspec
         
       - name: Show PodSpec Updated
         run: |
