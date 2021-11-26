@@ -31,7 +31,7 @@ jobs:
       - name: Check output
         run: |
           echo ${{ github.event.release.tag_name }}
-          echo ::set-output name=PENULTIMATE_TAG=$(git describe --exact-match --tags `git rev-list --tags --max-count=1 --skip=1`)
+          echo ::set-output name=PENULTIMATE_TAG=$(git describe --exact-match --tags `git rev-list --tags --max-count=1 --skip=0`)
       
       # This will set latest tag version and print it
       - name: Get the version
@@ -40,7 +40,7 @@ jobs:
 
       # This will update the podspec version in the file
       - name: Update PodSpec 
-        run: sed -i.bu 's/spec.version      =.*/spec.version      = '${{ steps.get_version.outputs.VERSION }}'/' TestLibN.podspec
+        run: sed -i.bu 's/spec.version      =.*/spec.version      = '${{ steps.get_version.outputs.PENULTIMATE_TAG }}'/' TestLibN.podspec
         
       - name: Show PodSpec Updated
         run: |
