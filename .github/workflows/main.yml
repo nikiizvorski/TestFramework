@@ -29,13 +29,9 @@ jobs:
         id: vars
         run: echo ::set-output name=tag::${GITHUB_REF#refs/*/}
       - name: Check output
-        env:
-          CURRENT_TAG= ${{ github.event.release.tag_name }}
-          PENULTIMATE_TAG=$(git describe --exact-match --tags `git rev-list --tags --max-count=1 --skip=1`)
-          
         run: |
-          echo $CURRENT_TAG
-          echo $PENULTIMATE_TAG
+          echo ${{ github.event.release.tag_name }}
+          echo ::set-output name=PENULTIMATE_TAG=$(git describe --exact-match --tags `git rev-list --tags --max-count=1 --skip=1`)
       
       # This will set latest tag version and print it
       - name: Get the version
