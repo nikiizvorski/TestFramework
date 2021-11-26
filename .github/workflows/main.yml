@@ -22,11 +22,15 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
+      
+      # This will set latest tag version and print it
+      - name: Set env
+        run: echo "RELEASE_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
 
       # This will update the podspec version in the file
       - name: Update PodSpec 
         run: |
-          find ./ -type f -exec sed -i 's/spec.version      =.*/spec.version      = ${GITHUB_REF##*/}/' TestLibN.podspec
+          find ./ -type f -exec sed -i 's/spec.version      =.*/spec.version      = $RELEASE_VERSION/' TestLibN.podspec
           
       # This should lint the current pod
       - name: Lint Pod
