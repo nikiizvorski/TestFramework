@@ -32,9 +32,7 @@ jobs:
 
       # This will update the podspec version in the file
       - name: Update PodSpec 
-        env:
-          POD: "'${{ steps.get_version.outputs.VERSION }}'"
-        run: sed -i.bu 's/spec.version      ='.*'/spec.version      = ${{ env.POD }}/' TestLibN.podspec
+        run: sed -i.bu 's/spec.version      ='.*'/spec.version      = "'${{ steps.get_version.outputs.VERSION }}'"/' TestLibN.podspec
         
       - name: Show PodSpec Updated
         run: |
