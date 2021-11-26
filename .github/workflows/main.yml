@@ -29,8 +29,11 @@ jobs:
 
       # This will update the podspec version in the file
       - name: Update PodSpec 
+        run: sed -i 's/spec.version      =.*/spec.version      = $RELEASE_VERSION/' TestLibN.podspec
+        
+      - name: Show PodSpec Updated
         run: |
-          find ./ -type f -exec sed -i 's/spec.version      =.*/spec.version      = $RELEASE_VERSION/' TestLibN.podspec
+          echo "$(<TestLibN.podspec)"
           
       # This should lint the current pod
       - name: Lint Pod
